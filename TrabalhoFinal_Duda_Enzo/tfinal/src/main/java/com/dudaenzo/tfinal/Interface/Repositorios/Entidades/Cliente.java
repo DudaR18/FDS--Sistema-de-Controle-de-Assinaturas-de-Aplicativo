@@ -1,6 +1,9 @@
 package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
 
-import tfinal.src.main.java.com.dudaenzo.tfinal.Dominio.Entidade.ClienteModel;
+import com.dudaenzo.tfinal.Dominio.Entidade.ClienteModel;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.codigo;
 
 @Entity
 public class Cliente {

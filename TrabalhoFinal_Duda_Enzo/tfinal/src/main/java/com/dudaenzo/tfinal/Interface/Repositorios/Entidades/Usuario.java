@@ -1,5 +1,9 @@
 package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
 
+import com.dudaenzo.tfinal.Dominio.Entidade.UsuarioModel;
+
+import jakarta.persistence.Entity;
+
 @Entity
 public class Usuario {
     private String usuario;

@@ -1,5 +1,10 @@
 package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
 
+import com.dudaenzo.tfinal.Dominio.Entidade.PagamentoModel;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.codigo;
+
 @Entity
 public class Pagamento {
     @codigo
