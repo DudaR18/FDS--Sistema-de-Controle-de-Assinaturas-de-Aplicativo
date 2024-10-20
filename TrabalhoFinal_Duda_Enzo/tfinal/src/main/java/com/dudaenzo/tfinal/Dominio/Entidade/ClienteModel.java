@@ -1,4 +1,4 @@
-package com.dudaenzo.tfinal.Negocio.Entidade;
+package com.dudaenzo.tfinal.Dominio.Entidade;
 
 public class ClienteModel {
     long codigo;
@@ -26,7 +26,7 @@ public class ClienteModel {
     @Override
     public String toString() {
         return "{" +
-            " codigo= '" + getId() + "'" +
+            " codigo= '" + getCodigo() + "'" +
             ", nome= '" + getNome() + "'" +
             ", email= '" + getEmail() + "'" +
             "}";

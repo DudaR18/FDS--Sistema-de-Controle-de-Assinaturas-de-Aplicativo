@@ -1,11 +1,8 @@
-package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
+package com.dudaenzo.tfinal.Dominio.Entidade;
 
-@Entity
 public class Usuario {
     private String usuario;
     private String senha;
-
-    protected Usuario(){ }
 
     public Usuario(String usuario, String senha){
         this.usuario = usuario;
@@ -26,13 +23,5 @@ public class Usuario {
             " Usuario= '" + getUsuario() + "'" +
             ", Senha= '" + getSenha() + "'" +
             "}";
-    }
-
-    public static Usuario fromUsuarioModel(UsuarioModel pModel){
-        return new Usuario(pModel.getUsuario(),pModel.getSenha());
-    }
-
-    public static UsuarioModel toUsuarioModel(Usuario prod){
-        return new UsuarioModel(prod.getUsuario(),prod.getEmail());
     }
 }

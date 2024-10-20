@@ -1,17 +1,14 @@
-package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
+package com.dudaenzo.tfinal.Dominio.Entidade;
 
-@Entity
-public class Assinaturas{
-    @codigo
+public class AssinaturaModel {
+
     private long codigo;
     private Aplicativo aplicativo;
     private Cliente cliente;
     private Date inicioVigencia;
     private Date fimVigencia;
 
-    protected Assinaturas(){ }
-
-    public Assinaturas(long codigo, Date inicioVigencia, Date fimVigencia, Aplicativo aplicativo, Cliente cliente){
+    public AssinaturaModel(long codigo, Date inicioVigencia, Date fimVigencia, Aplicativo aplicativo, Cliente cliente){
         this.codigo = codigo;
         this.inicioVigencia = inicioVigencia;
         this.fimVigencia = fimVigencia;
@@ -48,13 +45,5 @@ public class Assinaturas{
             ", Aplicativo= '" + getAplicativo() + "'" +
             ", Cliente= '" + getCliente() + "'" +
             "}";
-    }
-
-    public static Assinaturas fromAssinaturaModel(AssinaturaModel pModel){
-        return new Assinaturas(pModel.getCodigo(),pModel.getinicioVigencia(),pModel.getfimVigencia(), pModel.getAplicativo(), pModel.getCliente());
-    }
-
-    public static AssinaturaModel toAssinaturaModel(Assinaturas prod){
-        return new AssinaturaModel(prod.getCodigo(),prod.getinicioVigencia(),prod.getfimVigencia(), prod.getAplicativo(), prod.getCliente());
     }
 }

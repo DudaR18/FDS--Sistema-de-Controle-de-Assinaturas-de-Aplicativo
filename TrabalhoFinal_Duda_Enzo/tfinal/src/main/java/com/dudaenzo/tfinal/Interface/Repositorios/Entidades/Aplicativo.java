@@ -1,4 +1,6 @@
-package com.dudaenzo.tfinal.Negocio.Entidade;
+package com.dudaenzo.tfinal.Interface.Repositorios.Entidade;
+
+import tfinal.src.main.java.com.dudaenzo.tfinal.Dominio.Entidade.AplicativoModel;
 
 @Entity
 public class Aplicativo {
@@ -25,5 +27,22 @@ public class Aplicativo {
 
     public double getCustoMensal(){
         return this.custoMensal;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " codigo='" + getCodigo() + "'" +
+            ", nome='" + getNome() + "'" +
+            ", custoMensal='" + getCustoMensal() + "'" +
+            "}";
+    }
+
+    public static Aplicativo fromAplicativoModel(AplicativoModel pModel){
+        return new Aplicativo(pModel.getCodigo(),pModel.getCustoMensal(),pModel.getNome());
+    }
+
+    public static AplicativoModel toAplicativoModel(Aplicativo prod){
+        return new AplicativoModel(prod.getCodigo(),prod.getCustoMensal(),prod.getNome());
     }
 }

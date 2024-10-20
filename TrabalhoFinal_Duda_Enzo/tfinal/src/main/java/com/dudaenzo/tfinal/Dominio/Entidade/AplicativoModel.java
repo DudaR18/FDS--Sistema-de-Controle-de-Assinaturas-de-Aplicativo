@@ -1,4 +1,4 @@
-package com.dudaenzo.tfinal.Negocio.Entidade;
+package com.dudaenzo.tfinal.Dominio.Entidade;
 
 public class AplicativoModel {
     private long codigo;
@@ -21,7 +21,7 @@ public class AplicativoModel {
 
     public double getCustoMensal(){
         return this.custoMensal;
-    }
+    }    
 
 
     @Override
